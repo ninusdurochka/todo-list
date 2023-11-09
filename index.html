@@ -2,57 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>todo list</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-<main class="content">
-    <section class="todo">
-        <h1 class="todo-title">todo</h1>
-        <div class="upper">
-            <nav class="tags">
-                <div class="tag">
-                    <div class="ellipse" id="ellipse-1"></div>
-                    <p class="work">work</p>
-                </div>
-                <div class="tag">
-                    <div class="ellipse" id="ellipse-2"></div>
-                    <p class="study">study</p>
-                </div>
-                <div class="tag">
-                    <div class="ellipse" id="ellipse-3"></div>
-                    <p class="entertainment">entertainment</p>
-                </div>
-                <div class="tag">
-                    <div class="ellipse" id="ellipse-4"></div>
-                    <p class="family">family</p>
-                </div>
-            </nav>
+<div class="wrapper">
+    <main>
+    <section class="navigation">
+        <div class="navigation__burger">
+            <span></span>
         </div>
+        <h1 class="todo__title">todo</h1>
+            <nav class="navigation__tags">
+                <ul class="tags__list">
+                <li class="tag" >
+                    <div class="tag__ellipse" id="ellipse-1"></div>
+                    <p class="tag__name">work</p>
+                </li>
+                <li class="tag">
+                    <div class="tag__ellipse" id="ellipse-2"></div>
+                    <p class="tag__name">study</p>
+                </li>
+                <li class="tag">
+                    <div class="tag__ellipse" id="ellipse-3"></div>
+                    <p class="tag__name">entertainment</p>
+                </li>
+                <li class="tag">
+                    <div class="tag__ellipse" id="ellipse-4"></div>
+                    <p class="tag__name">family</p>
+                </li>
+                </ul>
+            </nav>
         <div class="logo">
-            <img class="logo-image" src="images/logo.png" alt="Logo image"/>
+            <img class="logo__image" src="images/logo.png" alt="Logo image"/>
         </div>
     </section>
-    <section class="day">
-        <div class="title">
-            <h1 class="today">today</h1>
-        </div>
-        <div class="tasks">
-            <section class="task" id="task_1">
-                <div class="task-title">
+    <section class="day-view">
+        <h1 class="day__title">today</h1>
+        <ul class="tasks__list">
+            <li class="task" id="task-1">
+                <div class="task__title">
                     <h3>The first task title</h3>
-                    <div class="task-button">...</div>
+                    <div class="task__button">...</div>
                 </div>
-                <div class="description">
+                <div class="task__description">
                     <p>Everyone has the right to freedom of thought, conscience and religion;
                         this right includes freedom to change his religion or belief, and freedom,
                         either alone or in community with others and in public or private,
                         to manifest his religion or belief in teaching, practice, worship and observance.</p>
                 </div>
-                <div class="options">
-                    <div class="task-tags">
-                        <div class="ellipse" id="task-ellipse-1"></div>
-                        <div class="ellipse" id="task-ellipse-2"></div>
+                <div class="task__options">
+                    <div class="task__tags">
+                        <div class="tag__ellipse" id="task-ellipse-1"></div>
+                        <div class="tag__ellipse" id="task-ellipse-2"></div>
                     </div>
                     <label class="checkbox">
                         <input class="checkbox-input" type="checkbox">
@@ -65,18 +69,18 @@
 
                 </div>
 
-            </section>
-            <section class="task" id="task_2">
-                <div class="task-title">
+            </li>
+            <li class="task" id="task-2">
+                <div class="task__title">
                     <h3>The second task title</h3>
-                    <div class="task-button">...</div>
+                    <div class="task__button">...</div>
                 </div>
-                <div class="description">
+                <div class="task__description">
                     <p>The second task description. The second task description.</p>
                 </div>
-                <div class="options">
-                    <div class="task-tags">
-                        <div class="ellipse" id="task-ellipse-3"></div>
+                <div class="task__options">
+                    <div class="task__tags">
+                        <div class="tag__ellipse" id="task-ellipse-3"></div>
                     </div>
                     <label class="checkbox">
                         <input class="checkbox-input" type="checkbox">
@@ -88,19 +92,19 @@
                     </label>
 
                 </div>
-            </section>
-        </div>
+            </li>
+        </ul>
     </section>
     <div class="calendar">
-        <div class="title">
+        <div class="calendar__title">
 
         </div>
-        <div class="calendar_widget">
+        <div class="calendar__widget">
             <p>Тут эстетичный календарик</p>
         </div>
     </div>
 
 </main>
-
+</div>
 </body>
 </html>

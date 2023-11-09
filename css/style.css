@@ -18,33 +18,60 @@ body {
     font-weight: 300;
 }
 
-.content {
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrapper {
     display: flex;
     height: 100vh;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 80px
+    margin: 30px 80px 0 80px;
 }
 
-.todo {
+.navigation {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 30%;
     height: 100%;
     overflow: hidden;
     flex-shrink: 2;
 }
 
-.todo-title {
+.navigation__burger {
+    display: none;
+}
+
+.todo__title {
     margin-bottom: 30px;
 }
 
 .upper {
     flex: 1 0 auto;
 }
-.tags {
+
+.navigation__tags {
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
+}
+
+.tags__list {
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.tags__list li {
+    list-style: none;
+
 }
 
 .tag {
@@ -55,11 +82,12 @@ body {
 }
 
 
-.title {
+.day__title {
     margin-bottom: 30px;
 }
 
-.ellipse {
+
+.tag__ellipse {
     width: 4vh;
     height: 4vh;
     border-radius: 50%;
@@ -82,16 +110,22 @@ body {
     background-color: #D1E5F7;
 }
 
-.day {
+.day-view {
     flex-shrink: 1;
     flex-direction: column;
     width: 65%;
     overflow: hidden;
 }
 
-.tasks {
+.tasks__list {
     display: flex;
     flex-direction: column;
+    padding-left: 0;
+}
+
+.tasks__list li {
+    list-style: none;
+
 }
 
 .task {
@@ -105,27 +139,27 @@ body {
     padding: 15px 20px;
 }
 
-.task-title {
+.task__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 12px;
 }
 
-.description {
+.task__description {
     margin-bottom: 12px;
 }
 
-.task-button {
+.task__button {
 }
 
-.options {
+.task__options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.task-tags{
+.task__tags {
     display: flex;
     flex-direction: row;
 }
@@ -178,7 +212,7 @@ body {
     stroke-dashoffset: 0;
 }
 
-.logo-image {
+.logo__image {
     width: 20vh;
     height: 23vh;
     flex: 0 0 auto;
@@ -193,4 +227,143 @@ body {
     margin-right: auto;
     text-align: center;
     flex-shrink: 2;
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 970px;
+    }
+
+    .tag__ellipse {
+        width: 3vh;
+        height: 3vh;
+        border-radius: 50%;
+        margin-right: 7px;
+    }
+
+    .tag__name {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .wrapper {
+        max-width: none;
+        margin: 20px 10px 10px 10px;
+    }
+
+    .tag__ellipse {
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        margin-right: 7px;
+    }
+
+    .tag__name {
+        font-size: 25px;
+    }
+
+    .calendar {
+        width: 0;
+        display: none;
+    }
+    .todo__title {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navigation {
+        width: 10%;
+    }
+
+    .day-view {
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    .navigation__burger {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 30px;
+        height: 20px;
+        z-index: 2;
+        left: 0;
+
+    }
+
+    .navigation__burger span {
+        background-color: #69665C;
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .navigation__burger::before,
+    .navigation__burger::after {
+        content: '';
+        background-color: #69665C;
+        position: absolute;
+        width: 100%;
+        height: 9%;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .navigation__burger::before {
+        top: 0;
+    }
+
+    .navigation__burger::after {
+        bottom: 0;
+    }
+
+    .navigation__burger._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .navigation__burger._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
+    .navigation__burger._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    .navigation__tags {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: #F6FFF8;
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+
+    .navigation__tags._active {
+        left: 0;
+    }
+
+    .tags__list {
+        display: block;
+    }
+
+    .tags__list li{
+        margin: 0 0 30px 0;
+    }
+
+    .tag {
+        font-size: 24px;
+    }
+
+
 }
