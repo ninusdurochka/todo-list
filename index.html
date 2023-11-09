@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="content">
-    <div class="todo">
+<main class="content">
+    <section class="todo">
         <h1 class="todo-title">todo</h1>
         <div class="upper">
-            <div class="tags">
+            <nav class="tags">
                 <div class="tag">
                     <div class="ellipse" id="ellipse-1"></div>
                     <p class="work">work</p>
@@ -27,18 +27,18 @@
                     <div class="ellipse" id="ellipse-4"></div>
                     <p class="family">family</p>
                 </div>
-            </div>
+            </nav>
         </div>
         <div class="logo">
             <img class="logo-image" src="images/logo.png" alt="Logo image"/>
         </div>
-    </div>
-    <div class="day">
+    </section>
+    <section class="day">
         <div class="title">
             <h1 class="today">today</h1>
         </div>
         <div class="tasks">
-            <div class="task" id="task_1">
+            <section class="task" id="task_1">
                 <div class="task-title">
                     <h3>The first task title</h3>
                     <div class="task-button">...</div>
@@ -54,16 +54,19 @@
                         <div class="ellipse" id="task-ellipse-1"></div>
                         <div class="ellipse" id="task-ellipse-2"></div>
                     </div>
-                    <div class="checkbox">
-                        <label class="todo_checkbox">
-                            <input type="checkbox">
-                        </label>
-                        <p>Done</p>
-                    </div>
+                    <label class="checkbox">
+                        <input class="checkbox-input" type="checkbox">
+                        <svg class="checkbox-icon" viewBox="0 0 22 22">
+                            <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6" />
+                            <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round" stroke-width="2.5" d="M4 10l5 5 9-9" />
+                        </svg>
+                        <span class="checkbox-label">Done</span>
+                    </label>
+
                 </div>
 
-            </div>
-            <div class="task" id="task_2">
+            </section>
+            <section class="task" id="task_2">
                 <div class="task-title">
                     <h3>The second task title</h3>
                     <div class="task-button">...</div>
@@ -75,16 +78,19 @@
                     <div class="task-tags">
                         <div class="ellipse" id="task-ellipse-3"></div>
                     </div>
-                    <div class="checkbox">
-                        <label class="todo_checkbox">
-                            <input type="checkbox">
-                        </label>
-                        <p>Done</p>
-                    </div>
+                    <label class="checkbox">
+                        <input class="checkbox-input" type="checkbox">
+                        <svg class="checkbox-icon" viewBox="0 0 22 22">
+                            <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6" />
+                            <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round" stroke-width="2.5" d="M4 10l5 5 9-9" />
+                        </svg>
+                        <span class="checkbox-label">Done</span>
+                    </label>
+
                 </div>
-            </div>
+            </section>
         </div>
-    </div>
+    </section>
     <div class="calendar">
         <div class="title">
 
@@ -94,7 +100,7 @@
         </div>
     </div>
 
-</div>
+</main>
 
 </body>
 </html>
