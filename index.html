@@ -10,101 +10,149 @@
 <body>
 <div class="wrapper">
     <main>
-    <section class="navigation">
-        <div class="navigation__burger">
-            <span></span>
-        </div>
-        <h1 class="todo__title">todo</h1>
+        <section class="navigation">
+            <div class="navigation__burger">
+                <span></span>
+            </div>
+            <h1 class="todo__title">todo</h1>
             <nav class="navigation__tags">
                 <ul class="tags__list">
-                <li class="tag" >
-                    <div class="tag__ellipse" id="ellipse-1"></div>
-                    <p class="tag__name">work</p>
-                </li>
-                <li class="tag">
-                    <div class="tag__ellipse" id="ellipse-2"></div>
-                    <p class="tag__name">study</p>
-                </li>
-                <li class="tag">
-                    <div class="tag__ellipse" id="ellipse-3"></div>
-                    <p class="tag__name">entertainment</p>
-                </li>
-                <li class="tag">
-                    <div class="tag__ellipse" id="ellipse-4"></div>
-                    <p class="tag__name">family</p>
-                </li>
+                    <li class="tag">
+                        <div class="tag__ellipse" id="ellipse-1"></div>
+                        <p class="tag__name">work</p>
+                    </li>
+                    <li class="tag">
+                        <div class="tag__ellipse" id="ellipse-2"></div>
+                        <p class="tag__name">study</p>
+                    </li>
+                    <li class="tag">
+                        <div class="tag__ellipse" id="ellipse-3"></div>
+                        <p class="tag__name">entertainment</p>
+                    </li>
+                    <li class="tag">
+                        <div class="tag__ellipse" id="ellipse-4"></div>
+                        <p class="tag__name">family</p>
+                    </li>
                 </ul>
             </nav>
-        <div class="logo">
-            <img class="logo__image" src="images/logo.png" alt="Logo image"/>
-        </div>
-    </section>
-    <section class="day-view">
-        <h1 class="day__title">today</h1>
-        <ul class="tasks__list">
-            <li class="task" id="task-1">
-                <div class="task__title">
-                    <h3>The first task title</h3>
-                    <div class="task__button">...</div>
-                </div>
-                <div class="task__description">
-                    <p>Everyone has the right to freedom of thought, conscience and religion;
-                        this right includes freedom to change his religion or belief, and freedom,
-                        either alone or in community with others and in public or private,
-                        to manifest his religion or belief in teaching, practice, worship and observance.</p>
-                </div>
-                <div class="task__options">
-                    <div class="task__tags">
-                        <div class="tag__ellipse" id="task-ellipse-1"></div>
-                        <div class="tag__ellipse" id="task-ellipse-2"></div>
+            <div class="logo">
+                <img class="logo__image" src="images/logo.png" alt="Logo image"/>
+            </div>
+        </section>
+        <section class="day-view">
+            <h1 class="day__title">today</h1>
+            <ul class="tasks__list">
+                <li class="task" id="task-1">
+                    <div class="task__title">
+                        <h3>The first task title</h3>
+                        <div class="task__button">...</div>
                     </div>
-                    <label class="checkbox">
-                        <input class="checkbox-input" type="checkbox">
-                        <svg class="checkbox-icon" viewBox="0 0 22 22">
-                            <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6" />
-                            <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round" stroke-width="2.5" d="M4 10l5 5 9-9" />
-                        </svg>
-                        <span class="checkbox-label">Done</span>
-                    </label>
-
-                </div>
-
-            </li>
-            <li class="task" id="task-2">
-                <div class="task__title">
-                    <h3>The second task title</h3>
-                    <div class="task__button">...</div>
-                </div>
-                <div class="task__description">
-                    <p>The second task description. The second task description.</p>
-                </div>
-                <div class="task__options">
-                    <div class="task__tags">
-                        <div class="tag__ellipse" id="task-ellipse-3"></div>
+                    <div class="task__description">
+                        <p>Everyone has the right to freedom of thought, conscience and religion;
+                            this right includes freedom to change his religion or belief, and freedom,
+                            either alone or in community with others and in public or private,
+                            to manifest his religion or belief in teaching, practice, worship and observance.</p>
                     </div>
-                    <label class="checkbox">
-                        <input class="checkbox-input" type="checkbox">
-                        <svg class="checkbox-icon" viewBox="0 0 22 22">
-                            <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6" />
-                            <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round" stroke-width="2.5" d="M4 10l5 5 9-9" />
-                        </svg>
-                        <span class="checkbox-label">Done</span>
-                    </label>
+                    <div class="task__options">
+                        <div class="task__tags">
+                            <div class="tag__ellipse" id="task-ellipse-1"></div>
+                            <div class="tag__ellipse" id="task-ellipse-2"></div>
+                        </div>
+                        <label class="checkbox">
+                            <input class="checkbox-input" type="checkbox">
+                            <svg class="checkbox-icon" viewBox="0 0 22 22">
+                                <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6"/>
+                                <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round"
+                                      stroke-width="2.5" d="M4 10l5 5 9-9"/>
+                            </svg>
+                            <span class="checkbox-label">Done</span>
+                        </label>
 
-                </div>
-            </li>
-        </ul>
-    </section>
-    <div class="calendar">
-        <div class="calendar__title">
+                    </div>
 
-        </div>
-        <div class="calendar__widget">
-            <p>Тут эстетичный календарик</p>
-        </div>
-    </div>
+                </li>
+                <li class="task" id="task-2">
+                    <div class="task__title">
+                        <h3>The second task title</h3>
+                        <div class="task__button">...</div>
+                    </div>
+                    <div class="task__description">
+                        <p>The second task description. The second task description.</p>
+                    </div>
+                    <div class="task__options">
+                        <div class="task__tags">
+                            <div class="tag__ellipse" id="task-ellipse-3"></div>
+                        </div>
+                        <label class="checkbox">
+                            <input class="checkbox-input" type="checkbox">
+                            <svg class="checkbox-icon" viewBox="0 0 22 22">
+                                <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6"/>
+                                <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round"
+                                      stroke-width="2.5" d="M4 10l5 5 9-9"/>
+                            </svg>
+                            <span class="checkbox-label">Done</span>
+                        </label>
 
-</main>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="calendar_section">
+            <h1 class="calendar__title">calendar</h1>
+            <div id="calendar"></div>
+            <script>
+            function createCalendar(id, year, month) {
+                let elem = document.getElementById(id);
+
+                let mon = month - 1;
+                let d = new Date(year, mon);
+
+                let table = `
+                    <table>
+                        <tr>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                        <tr>
+                    `;
+
+                for(let i=0; i<getDay(d); i++) {
+                    table += '<td></td>'
+                }
+
+                while(d.getMonth() == mon) {
+                    table += '<td>' + d.getDate() + '</td>'
+                    if(getDay(d) % 7 == 6) {
+                        table += '</tr><tr>'
+                    }
+                    d.setDate(d.getDate()+1)
+                }
+
+                if(getDay(d) != 0) {
+                    for(let i=getDay(d); i<7; i++) {
+                        table += '<td></td>'
+                    }
+                }
+
+                table += '</tr></table>'
+                elem.innerHTML = table
+            }
+            function getDay(date) {
+                let day = date.getDay();
+                if(day == 0) day = 7;
+                return day - 1;
+            }
+
+            createCalendar('calendar', 2023, 11)
+        </script>
+        </section>
+
+    </main>
 </div>
 </body>
 </html>
