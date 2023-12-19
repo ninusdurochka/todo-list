@@ -16,11 +16,15 @@ body {
     height: 100vh;
     font-size: 15px;
     font-weight: 300;
+    overflow: hidden;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 main {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,7 +35,7 @@ main {
     height: 100vh;
     flex-direction: row;
     justify-content: space-between;
-    margin: 30px 80px 0 80px;
+    margin: 30px 70px 0 80px;
 }
 
 .navigation {
@@ -50,6 +54,7 @@ main {
 
 .todo__title {
     margin-bottom: 30px;
+    margin-left: 10px;
 }
 
 .upper {
@@ -79,7 +84,37 @@ main {
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
+    margin-left: 10px;
+    cursor: pointer;
 }
+
+.tag.hover  p {
+    font-size: 20px;
+}
+
+.tag.hover .tag__ellipse {
+    width: 5vh;
+    height: 5vh;
+}
+
+.nav__elem.hover a {
+    font-size: 20px;
+}
+
+.nav__elem.hover #habit__tracker__img {
+    width: 7vh;
+    height: 7vh;
+}
+
+
+.nav__elem {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+
 
 
 .day__title {
@@ -110,11 +145,49 @@ main {
     background-color: #D1E5F7;
 }
 
+.navigation__sections {
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sections__list {
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.sections__list li {
+    list-style: none;
+
+}
+
+.nav__elem {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+#habit__tracker__img {
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    margin-left: 0;
+}
+
+.section__name {
+    margin-top: 13px;
+}
+
 .day-view {
     flex-shrink: 1;
     flex-direction: column;
     width: 65%;
     overflow: hidden;
+    padding-right: 30px;
 }
 
 .tasks__list {
@@ -143,11 +216,29 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     margin-bottom: 12px;
+}
+.tittle-text {
+    margin-top: 7px;
+}
+.task-span {
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.task-span:hover {
+    cursor: pointer;
+
 }
 
 .task__description {
     margin-bottom: 12px;
+    display: flex;
+}
+
+.task-description-text {
+    overflow-wrap: anywhere;
 }
 
 .task__button {
@@ -155,7 +246,7 @@ main {
 
 .task__options {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
 }
 
@@ -221,7 +312,7 @@ main {
 
 .calendar_section {
     flex-direction: column;
-    width: 60%;
+    width: 50%;
     overflow: hidden;
     flex-shrink: 2;
 }
@@ -273,6 +364,201 @@ th {
     background-color: #FFF9DE;
 }
 
+
+/*button addNewTask*/
+.today__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#openModal {
+    margin-right: 20px;
+    border-radius: 15px;
+    color: #69665C;
+    font-size: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 5vh;
+    height: 5vh;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 50%;
+}
+
+.input-task-tittle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+#taskInput{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.description__container {
+    display: flex;
+    width: 100%;
+    height: 85%;
+}
+
+#description-input{
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    width: 40%;
+    resize: none;
+    padding-left: 10px;
+}
+
+.result {
+    display: flex;
+    text-align: right;
+    margin-top: 35%;
+    padding-right: 20px;
+    color: black;
+}
+
+#addTaskButton {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    margin-right: 20px;
+    background: #FFF9DE;
+    color: #69665C;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+/*habit_tracker*/
+
+.habits__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding-left: 0;
+}
+
+.habits__list li {
+    list-style: none;
+
+}
+
+.habit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #FFF9DE;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    padding: 15px 0;
+    width: 180px;
+    height: 180px;
+}
+
+.habit__name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.habit__options {
+    display: flex;
+    width: 20vh;
+    height: 20vh;
+    margin: 0 auto;
+}
+
+.habit__checkbox {
+    cursor: pointer;
+    margin: 0 auto;
+    padding-top: 3vh;
+    padding-bottom: 7vh;
+}
+
+.habit__checkbox-input {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.habit__checkbox-icon {
+    width: 10vh;
+    height: 10vh;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.habit__checkbox-icon .tick {
+    stroke-dasharray: 20px;
+    stroke-dashoffset: 20px;
+    transition: stroke-dashoffset 0.2s ease-out;
+}
+
+.habit__checkbox-label {
+    margin-left: 0.5em;
+}
+
+.habit__checkbox-input:checked + .habit__checkbox-icon .tick {
+    stroke-dashoffset: 0;
+}
+
+.section__name.current  {
+    font-weight: bold;
+}
+
 @media (max-width: 1200px) {
     .wrapper {
         max-width: 970px;
@@ -285,7 +571,19 @@ th {
         margin-right: 7px;
     }
 
-    .tag__name {
+    #habit__tracker__img {
+        width: 4.5vh;
+        height: 4.5vh;
+        border-radius: 50%;
+        margin-left: 4px;
+        margin-right: 3px;
+    }
+
+    .section__name {
+        margin-top: 7px;
+    }
+
+    .tag__name, .section__name {
         font-size: 15px;
     }
 
@@ -311,9 +609,22 @@ th {
         height: 5vh;
         border-radius: 50%;
         margin-right: 7px;
+        margin-left: 8px;
     }
 
-    .tag__name {
+    #habit__tracker__img {
+        width: 7vh;
+        height: 7vh;
+        border-radius: 50%;
+        margin-left: 0;
+        margin-right: 3px;
+    }
+
+    .section__name {
+        margin-top: 8.5px;
+    }
+
+    .tag__name, .section__name {
         font-size: 25px;
     }
 
@@ -332,6 +643,15 @@ th {
 
     .navigation {
         width: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .menu {
+        width: 10%;
+        display: flex;
+        flex-direction: column;
     }
 
     .day-view {
@@ -392,6 +712,8 @@ th {
     .navigation__burger._active span {
         transform: scale(0) translate(0px, -50%);
     }
+
+
     .navigation__tags {
         position: fixed;
         top: 0;
@@ -404,9 +726,12 @@ th {
         overflow: auto;
     }
 
+
+
     .navigation__tags._active {
         left: 0;
     }
+
 
     .tags__list {
         display: block;
@@ -415,6 +740,8 @@ th {
     .tags__list li{
         margin: 0 0 30px 0;
     }
+
+
 
     .tag {
         font-size: 24px;
