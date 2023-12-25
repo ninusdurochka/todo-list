@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>todo list</title>
-    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <script src="js/mainMenu.js" defer></script>
-    <script src="js/addTask.js" defer></script>
-    <script src="js/loadData.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>habit tracker</title>
 </head>
 <body>
 <div class="wrapper">
@@ -43,7 +41,7 @@
                     <li class="nav__elem">
                         <img id="habit__tracker__img" alt="habit tracker"
                              src="data:image/png;base64,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">
-                        <a href="habit_tracker.html" class="section__name">habit tracker</a>
+                        <a class="section__name" href="habit_tracker.html" >habit tracker</a>
                     </li>
                     <li class="nav__elem">
                         <a href="page_load_stats.html" class="section__name">load stats</a>
@@ -55,31 +53,75 @@
             </div>
         </section>
         <section class="day-view">
-            <div class="today__container">
-                <h1 class="day__title">today</h1>
-
-                <button id="openModal">+</button>
-
-                <div id="taskModal" class="modal">
-                    <div class="modal-content">
-                        <div class="input-task-tittle">
-                            <form class="form-task">
-                                <input type="text" id="taskInput" placeholder="Task">
-                                <button type="submit" id="addTaskButton">Add</button>
-                            </form>
-                        </div>
-                        <div class="description__container">
-                            <textarea rows="5" class="textarea" id="description-input"
-                                      placeholder="Description..."></textarea>
-                            <p class="result"></p>
-                        </div>
+            <h1 class="day__title">today</h1>
+            <ul class="habits__list">
+                <li class="habit" id="habit-1">
+                    <div class="habit__name">
+                        <h3>Habit name 1</h3>
+                        <div class="task__button">...</div>
                     </div>
-                </div>
-            </div>
-            <div class="preloader"></div>
-            <ul class="tasks__list" id="list-container">
+                    <div class="habit__options">
+                        <label class="habit__checkbox" id="habit__checkbox1">
+                            <input class="habit__checkbox-input" type="checkbox">
+                            <svg class="habit__checkbox-icon" viewBox="0 0 22 22">
+                                <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6"/>
+                                <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round"
+                                      stroke-width="2.5" d="M4 10l5 5 9-9"/>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
 
+                <li class="habit" id="habit-2">
+                    <div class="habit__name">
+                        <h3>Habit name 2</h3>
+                        <div class="task__button">...</div>
+                    </div>
+                    <div class="habit__options">
+                        <label class="habit__checkbox" id="habit__checkbox2">
+                            <input class="habit__checkbox-input" type="checkbox">
+                            <svg class="habit__checkbox-icon" viewBox="0 0 22 22">
+                                <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6"/>
+                                <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round"
+                                      stroke-width="2.5" d="M4 10l5 5 9-9"/>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
 
+                <li class="habit" id="habit-3">
+                    <div class="habit__name">
+                        <h3>Habit name 3</h3>
+                        <div class="task__button">...</div>
+                    </div>
+                    <div class="habit__options">
+                        <label class="habit__checkbox" id="habit__checkbox3">
+                            <input class="habit__checkbox-input" type="checkbox">
+                            <svg class="habit__checkbox-icon" viewBox="0 0 22 22">
+                                <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6"/>
+                                <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round"
+                                      stroke-width="2.5" d="M4 10l5 5 9-9"/>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
+
+                <li class="habit" id="habit-4">
+                    <div class="habit__name">
+                        <h3>Habit name 4</h3>
+                        <div class="task__button">...</div>
+                    </div>
+                    <div class="habit__options">
+                        <label class="habit__checkbox" id="habit__checkbox4">
+                            <input class="habit__checkbox-input" type="checkbox">
+                            <svg class="habit__checkbox-icon" viewBox="0 0 22 22">
+                                <rect width="21" height="21" x=".5" y=".5" fill="#FFF9DE" stroke="#69665C" rx="6"/>
+                                <path class="tick" stroke="#69665C" fill="none" stroke-linecap="round"
+                                      stroke-width="2.5" d="M4 10l5 5 9-9"/>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
             </ul>
         </section>
         <section class="calendar_section">
@@ -137,9 +179,10 @@
                 createCalendar('calendar', 2023, 11)
             </script>
         </section>
-
     </main>
 </div>
+<footer>
 
+</footer>
 </body>
 </html>
